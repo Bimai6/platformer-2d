@@ -1,0 +1,39 @@
+[gd_scene format=4 uid="uid://b37kf8byfb6no"]
+
+[ext_resource type="Texture2D" uid="uid://cmv35j4vhrfq" path="res://Sprites/FreeBlocks.png" id="1_3hls8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbghi"]
+texture = ExtResource("1_3hls8")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:1/0 = 0
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hn12h"]
+tile_size = Vector2i(80, 80)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
+sources/1 = SubResource("TileSetAtlasSource_hbghi")
+
+[node name="Level1" type="Node2D" unique_id=899241579]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1538581944]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.18039216, 0.80784315, 1, 1)
+
+[node name="Clouds" type="TileMapLayer" parent="." unique_id=2011491547]
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1767792387]
+tile_map_data = PackedByteArray("AAAAAAgAAQABAAAAAAABAAgAAQABAAAAAAACAAgAAQABAAAAAAADAAgAAQABAAAAAAAEAAgAAQABAAAAAAAFAAgAAQABAAAAAAAGAAgAAQABAAAAAAAHAAgAAQABAAAAAAAIAAgAAQABAAAAAAAJAAgAAQABAAAAAAAKAAgAAQABAAAAAAALAAgAAQABAAAAAAAMAAgAAQABAAAAAAANAAgAAQABAAAAAAAOAAgAAQABAAAAAAAPAAgAAQABAAAAAAAPAAcAAQABAAAAAGAPAAYAAQABAAAAAGAPAAUAAQABAAAAAGAPAAQAAQABAAAAAGAPAAMAAQABAAAAAGAPAAIAAQABAAAAAGAPAAEAAQABAAAAAGAPAAAAAQABAAAAAGAAAAAAAQABAAAAAFAAAAEAAQABAAAAAFAAAAIAAQABAAAAAFAAAAMAAQABAAAAAFAAAAQAAQABAAAAAFAAAAUAAQABAAAAAFAAAAYAAQABAAAAAFAAAAcAAQABAAAAAFAGAAcAAQABAAAAAAAHAAcAAQABAAAAAAAIAAcAAQABAAAAAAAJAAcAAQABAAAAAAABAAIAAQABAAEAAAADAAQAAQABAAEAAAAEAAQAAQABAAEAAAALAAQAAQABAAEAAAAMAAQAAQABAAEAAAAOAAIAAQABAAEAAAA=")
+tile_set = SubResource("TileSet_hn12h")
